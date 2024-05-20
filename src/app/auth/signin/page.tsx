@@ -7,7 +7,7 @@ import { useSession, signIn } from 'next-auth/react';
 export default function SignIn() {
   const { data: session, status } = useSession();
   const router = useRouter();
-
+  
   useEffect(() => {
     if (status === 'authenticated') {
       router.push('/auth/protected');
